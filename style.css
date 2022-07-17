@@ -1,0 +1,64 @@
+* {
+    margin: 50;
+    padding: 0;
+}
+
+#game{
+    width: 500px;
+    height: 300px;
+    border: 1px solid #333;
+    box-shadow: rgb(22, 151, 190) 5px 5px;
+    overflow: hidden;
+}
+
+
+#personagem{
+    width: 20px;
+    right: -20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 250px;
+}
+
+.animar{
+    animation: jump 700ms infinite;
+}
+
+@keyframes jump{
+    0% {top: 250px;}
+    30% {top: 210px 0.5s;}
+    50% {top: 200px;}
+    70% {top: 210px 0.5s;}
+    100% {top: 250px;}
+}
+
+#quadrado{
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    position: relative;
+    top: 230px;
+    left: 520px;
+    animation: quadrado 1s linear infinite;
+}
+
+@keyframes quadrado{
+    0%{left: 520px;}
+    100%{left: -40px;}
+}
+
+#msg{
+    padding-left: 50px;
+    margin-inline: 80px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin-top: 20px;
+    font: normal 20pt arial;
+    border:  #333;
+    box-shadow: rgb(22, 151, 190) 5px 5px;
+    background-color: #2915df;
+}
+
+
