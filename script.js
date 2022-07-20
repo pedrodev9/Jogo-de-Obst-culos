@@ -1,5 +1,5 @@
 let personagem = document.querySelector('#personagem')
-let quadrado = document.querySelector('#quadrado')
+let pipe = document.querySelector('#pipe')
 let msg = document.querySelector('#msg') //mensagem de Jogo perdido
 
 function pular(){
@@ -19,13 +19,15 @@ var testarColisao = setInterval(function(){
         window.getComputedStyle(personagem).getPropertyValue('top')
     )
 
-    var esquerdaQuadrado = parseInt(
-        window.getComputedStyle(quadrado).getPropertyValue('left')
+    var esquerdaPipe = parseInt(
+        window.getComputedStyle(pipe).getPropertyValue('left')
     )
 
-    if(esquerdaQuadrado < 20 && esquerdaQuadrado > 0 && topoPersonagem >= 250){
-        quadrado.style.animation = 'none'
-        quadrado.style.display = 'none'
+    if(esquerdaPipe < 100 && esquerdaPipe > 0 && topoPersonagem >= 213){
+        pipe.style.animation = 'none' 
+        personagem.style.animation = 'none'
+        pipe.style.display = 'none'
+        cloud.style.animation = 'none'
         msg.innerHTML = '<strong>Você Perdeu!!</strong>'
 
         var btn = document.querySelector("#refresh")

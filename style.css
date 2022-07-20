@@ -4,21 +4,20 @@
 }
 
 #game{
+    background-color: rgb(12, 235, 243);
     width: 500px;
     height: 300px;
     border: 1px solid #333;
-    box-shadow: rgb(22, 151, 190) 5px 5px;
+    box-shadow: rgb(22, 151, 190) 5px 5px; 
     overflow: hidden;
 }
 
 
 #personagem{
-    width: 20px;
-    right: -20px;
-    height: 50px;
-    background-color: red;
-    position: relative;
-    top: 250px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 213px;
 }
 
 .animar{
@@ -26,26 +25,46 @@
 }
 
 @keyframes jump{
-    0% {top: 250px;}
-    30% {top: 210px 0.5s;}
-    50% {top: 200px;}
-    70% {top: 210px 0.5s;}
-    100% {top: 250px;}
+    0% {top: 213px;}
+    30% {top: 150px 0.7s;}
+    50% {top: 130px;}
+    70% {top: 150px 0.7s;}
+    100% {top: 213px;}
 }
 
-#quadrado{
-    height: 20px;
-    width: 20px;
-    background-color: blue;
+#pipe{
+    height: 40px;
+    width: 40px;
     position: relative;
-    top: 230px;
+    top: 260px;
     left: 520px;
-    animation: quadrado 1s linear infinite;
+    animation: pipe 1s linear infinite;
 }
 
-@keyframes quadrado{
+@keyframes pipe{
     0%{left: 520px;}
     100%{left: -40px;}
+}
+
+#cloud{
+      padding: 15px;
+      width: 170px;  
+      height: 80px;
+      position: absolute;
+      left: 500px;
+      animation: cloud 4s linear infinite
+}
+
+@keyframes cloud{
+    0% {left: 500px;
+        
+    }
+    100% {left: -300px;}
+}
+
+#grama{
+    margin-top: 150px;
+    width: 500px;
 }
 
 #msg{
@@ -57,7 +76,7 @@
     margin-top: 20px;
     font: normal 20pt arial;
     border:  #333;
-    box-shadow: rgb(22, 151, 190) 5px 5px;
+    box-shadow: rgb(190, 22, 22) 5px 5px;
     background-color: #2915df;
 }
 
